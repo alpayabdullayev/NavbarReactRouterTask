@@ -1,0 +1,17 @@
+#galery{
+    .bg-img{
+        min-height: 90vh;
+        background-image: url("https://149842022.v2.pressablecdn.com/dazzling/wp-content/uploads/sites/54/2012/01/unite-15.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            font-size: 80px;
+            color: white;
+        }
+    }
+}

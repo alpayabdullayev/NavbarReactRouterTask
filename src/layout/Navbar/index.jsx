@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./index.scss";
 import { HiMiniBars4 } from "react-icons/hi2";
+import Dropdown from "../../components/Dropdown";
 
 function Navbar() {
   return (
@@ -15,11 +16,7 @@ function Navbar() {
             <div className="nav-links">
               <ul className="nav-menu">
                 <li className="nav-menu-item">
-                  <NavLink
-                    className={"navlinkItem"}
-                    activeClassName="active"
-                    to={"/"}
-                  >
+                  <NavLink className={"navlinkItem"} activeClassName="active" to={"/"}>
                     Home
                   </NavLink>
                 </li>
@@ -37,40 +34,13 @@ function Navbar() {
                   <p className={"navlinkItem"} to={"/about"}>
                     About
                   </p>
-                  <ul className="dropdown-menu">
-                    <li className="dropdown-menu-item">
-                      <NavLink activeClassName="active"   to="/about/markup">
-                        <span>
-                          <HiMiniBars4 />
-                        </span>{" "}
-                        <span>&nbsp;Page Markup And Formatting</span>
-                      </NavLink>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <NavLink activeClassName="active"   to="/about/contact">Contact From</NavLink>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <NavLink activeClassName="active"   to="/about/image">Page Image Alignment</NavLink>
-                    </li>
-                    <li className="dropdown-menu-item">
-                      <NavLink activeClassName="active"   to="/about/float">Clearing Floats</NavLink>
-                    </li>
-
-                    <li className="dropdown-menu-item">
-                      <NavLink activeClassName="active"   to="/about/comments">Page With Comments</NavLink>
-                    </li>
-
-                    <li className="dropdown-menu-item">
-                      <NavLink activeClassName="active"   to="/about/commentsdisabled   ">Page With Comments disabked</NavLink>
-                    </li>
-                  </ul>
+                  <Dropdown/>
                 </li>
                 <li className="nav-menu-item">
                   <NavLink className={"navlinkItem"} to={"/languages"}>
                     Languages
                   </NavLink>
                 </li>
-                
               </ul>
             </div>
           </div>
